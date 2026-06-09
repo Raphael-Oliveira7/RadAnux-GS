@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rad Anux - Web Development (FIAP)</title>
+
+    <!-- Meta tags SEO -->
+    <meta name="description"
+        content="Plataforma de Chaos Engineering focada em testar a resiliência de software aeroespacial contra bit-flips de radiação.">
+    <meta name="keywords" content="Rad Anux, CubeSat, Satélite, Radiação, Bit-Flip, Chaos Engineering, Aeroespacial">
+
+    <!-- CSS Separado -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="theme-obsidian">
+
+    <!-- Banner de Integração de Disciplina -->
+    <div class="academic-banner" id="academic-banner-webdev">
+        <div class="container academic-banner-content">
+            <span>🎓 <strong>Global Solution - FIAP</strong> | Disciplina: Web Development (Prof. Israel Marques)</span>
+            <a href="../front-end/index.html" class="academic-link">&larr; Retornar para versão Front-End Design</a>
+        </div>
+    </div>
+
+    <!-- Cabeçalho Flutuante e Menu de Navegação (Estilo Dashboard Premium) -->
+    <header class="header" id="nav-header">
+        <div class="container">
+            <a href="#hero" class="logo" id="logo-link">
+                <!-- Ícone da Logo em SVG -->
+                <svg class="logo-svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                    stroke="var(--secondary-color)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <path
+                        d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z">
+                    </path>
+                    <path d="M2 12h20"></path>
+                </svg>
+                Rad<span>Anux</span>
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="#problema" class="nav-link" id="nav-item-1">Problema</a></li>
+                    <li><a href="#tecnologia" class="nav-link" id="nav-item-2">Tecnologia</a></li>
+                    <li><a href="#objetivos" class="nav-link" id="nav-item-3">Objetivos</a></li>
+                    <li><a href="#aplicacao" class="nav-link" id="nav-item-6">Simulador</a></li>
+                    <li><a href="#quiz-section" class="nav-link" id="nav-item-7">Quiz</a></li>
+                    <li><a href="#contato-section" class="nav-link" id="nav-item-8">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero / Banner de Introdução -->
+    <section id="hero">
+        <div class="container flex-row">
+            <div class="flex-col">
+                <h1 class="hero-title">Simulador de <span>Radiação</span> Aeroespacial</h1>
+                <p class="section-desc">Garantindo que satélites sobrevivam de forma autônoma no espaço através de
+                    testes de injeção de falhas controlados.</p>
+                <div class="hero-buttons">
+                    <a href="#aplicacao" class="btn" id="btn-hero-sim">Iniciar Simulação</a>
+                    <a href="#problema" class="btn btn-secondary" id="btn-hero-more">Relatório de Danos</a>
+                </div>
+            </div>
+            <div class="flex-col image-wrapper">
+                <!-- Slideshow Container -->
+                <div class="slideshow-container" id="radiation-slideshow">
+                    
+                    <!-- Slide 1 -->
+                    <div class="my-slide fade">
+                        <img src="images/satellite_radiation.png" alt="CubeSat sob radiação cósmica" class="slideshow-img">
+                        <div class="slide-caption">CubeSat em Órbita Terrestre sob Radiação</div>
+                    </div>
+
+                    <!-- Slide 2 -->
+                    <div class="my-slide fade">
+                        <img src="images/bit_flip_concept.png" alt="Conceito de Bit-Flip" class="slideshow-img">
+                        <div class="slide-caption">Fenômeno de Bit-Flip nos Circuitos Binários</div>
+                    </div>
+
+                    <!-- Slide 3 -->
+                    <div class="my-slide fade">
+                        <img src="images/space_cosmic_rays.png" alt="Painel de Controle e Radiação" class="slideshow-img">
+                        <div class="slide-caption">Painel de Telemetria de Caos Aeroespacial</div>
+                    </div>
+
+                    <!-- Botões de Navegação -->
+                    <a class="prev-slide" id="prev-slide-btn">&#10094;</a>
+                    <a class="next-slide" id="next-slide-btn">&#10095;</a>
+
+                    <!-- Indicadores (Pontos) -->
+                    <div class="slide-dots">
+                        <span class="slide-dot active" data-slide="0"></span>
+                        <span class="slide-dot" data-slide="1"></span>
+                        <span class="slide-dot" data-slide="2"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 1 – Problema -->
+    <section id="problema">
+        <div class="container flex-row">
+            <div class="flex-col image-wrapper">
+                <img src="images/bit_flip_concept.png"
+                    alt="Representação conceitual de um bit-flip onde dados binários mudam de valor devido à radiação cósmica solar"
+                    class="section-image" id="problema-img">
+            </div>
+            <div class="flex-col">
+                <h2 class="section-title">O Problema</h2>
+                <p class="section-desc">
+                    A radiação espacial causa bit-flips na memória de CubeSats, gerando falhas críticas e perda total de
+                    missões caras.
+                </p>
+                <p class="section-desc">
+                    Componentes comerciais comuns são altamente vulneráveis, e testes físicos em câmaras de radiação
+                    custam milhões de dólares.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 2 – Tecnologia -->
+    <section id="tecnologia">
+        <div class="container flex-row">
+            <div class="flex-col">
+                <h2 class="section-title">A Tecnologia</h2>
+                <p class="section-desc">
+                    O Rad Anux simula bombardeio de radiação injetando falhas lógicas e bit-flips nas variáveis do
+                    sistema embarcado.
+                </p>
+                <p class="section-desc">
+                    A ferramenta é integrada à esteira CI/CD, automatizando testes de caos diretamente no ciclo de
+                    desenvolvimento de software.
+                </p>
+            </div>
+            <div class="flex-col">
+                <div class="tech-feature-card">
+                    <div class="tech-icon-wrapper">
+                        <!-- Ícone de Chaos Engineering em SVG -->
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="4" y1="9" x2="20" y2="9"></line>
+                            <line x1="4" y1="15" x2="20" y2="15"></line>
+                            <line x1="10" y1="3" x2="8" y2="21"></line>
+                            <line x1="16" y1="3" x2="14" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="tech-card-title">Chaos Engineering</h3>
+                    <p class="tech-card-desc">Testando a robustez do software ao simular condições extremas antes que
+                        elas ocorram em órbita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 3 – Objetivos -->
+    <section id="objetivos">
+        <div class="container">
+            <h2 class="section-title">Objetivos</h2>
+            <div class="cards-container">
+                <div class="card" id="obj-card-1">
+                    <span class="card-num">// 01</span>
+                    <h3 class="card-title">Democratização</h3>
+                    <p class="section-desc">Democratizar os testes de resiliência espacial, reduzindo os custos de
+                        validação física com simulações digitais rápidas.</p>
+                </div>
+                <div class="card" id="obj-card-2">
+                    <span class="card-num">// 02</span>
+                    <h3 class="card-title">Auto-recuperação</h3>
+                    <p class="section-desc">Identificar vulnerabilidades no código antes do lançamento, garantindo que o
+                        satélite recupere-se autonomamente de falhas espaciais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 4 – Público-alvo -->
+    <section id="publico">
+        <div class="container flex-row">
+            <div class="flex-col">
+                <h2 class="section-title">Público-Alvo</h2>
+                <p class="section-desc">
+                    Engenheiros de software aeroespacial e desenvolvedores de CubeSats e nanossatélites que buscam
+                    validar a segurança de voo.
+                </p>
+                <p class="section-desc">
+                    Equipes de garantia de qualidade (QA) espacial e diretores de missão focados em evitar falhas
+                    catastróficas em órbita.
+                </p>
+            </div>
+            <div class="flex-col">
+                <div class="publico-list">
+                    <div class="publico-item" id="target-1">
+                        <div class="publico-icon">
+                            <!-- Ícone de Código/Desenvolvedores SVG -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="16 18 22 12 16 6"></polyline>
+                                <polyline points="8 6 2 12 8 18"></polyline>
+                            </svg>
+                        </div>
+                        <div class="publico-content">
+                            <h3>Desenvolvedores de CubeSats</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Criadores de hardware e software
+                                embarcado de baixo custo.</p>
+                        </div>
+                    </div>
+                    <div class="publico-item" id="target-2">
+                        <div class="publico-icon">
+                            <!-- Ícone de Controle/Direcionamento SVG -->
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <line x1="12" y1="2" x2="12" y2="22"></line>
+                            </svg>
+                        </div>
+                        <div class="publico-content">
+                            <h3>Engenheiros de Controle</h3>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem;">Responsáveis por guiar e
+                                monitorar missões críticas em órbita.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 5 – Benefícios -->
+    <section id="beneficios">
+        <div class="container">
+            <h2 class="section-title">Benefícios</h2>
+            <div class="beneficio-cards">
+                <div class="beneficio-card" id="ben-card-1">
+                    <div class="beneficio-icon">
+                        <!-- Ícone de Gráfico Descendente (Custos) SVG -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 18 13.5 8.5 8.5 13.5 1 6"></polyline>
+                            <polyline points="17 18 23 18 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); margin-bottom: 15px;">Redução de Custo</h3>
+                    <p class="section-desc">Redução drástica nos custos de testes de radiação física e agilidade com
+                        simulações contínuas de bit-flips na Terra.</p>
+                </div>
+                <div class="beneficio-card" id="ben-card-2">
+                    <div class="beneficio-icon">
+                        <!-- Ícone de Escudo/Segurança SVG -->
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--secondary-color)"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 style="font-family: var(--font-heading); margin-bottom: 15px;">Alta Confiabilidade</h3>
+                    <p class="section-desc">Aumento da confiabilidade do satélite com a geração automatizada do Score de
+                        Tolerância a Falhas em builds.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção 6 – Aplicação no dia a dia (Simulador Interativo) -->
+    <section id="aplicacao">
+        <div class="container flex-row">
+            <div class="flex-col">
+                <h2 class="section-title">Aplicação Prática</h2>
+                <p class="section-desc">
+                    Desenvolvedores testam o código contra radiação orbital informando o coeficiente, monitorando logs e
+                    reações de segurança na tela.
+                </p>
+                <p class="section-desc">
+                    O sistema avalia a capacidade de auto-recuperação do software e gera relatórios matemáticos para
+                    autorizar o lançamento real.
+                </p>
+            </div>
+            <div class="flex-col">
+                <!-- Painel do Simulador Estilo Computador de Bordo Aeroespacial -->
+                <div class="simulator-panel" id="satellite-dashboard">
+                    <div class="simulator-header">
+                        <div class="sim-brand">
+                            <span class="brand-sub">ANUX ENGINE // V1.0</span>
+                            <span class="sim-title">TESTRAD CONTROL PANEL</span>
+                        </div>
+                        <div class="led-group">
+                            <div class="led-indicator">
+                                <span id="led-green" class="led green"></span>
+                                <span class="led-label">SYS_OK</span>
+                            </div>
+                            <div class="led-indicator">
+                                <span id="led-red" class="led red"></span>
+                                <span class="led-label">SYS_WARN</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="sim-control-group">
+                        <div class="sim-label">
+                            <span>COEFICIENTE DE RADIAÇÃO (k)</span>
+                            <span id="rad-val-display" class="value-highlight">0.05</span>
+                        </div>
+                        <input type="range" id="sim-radiation" min="0.01" max="0.10" step="0.01" value="0.05"
+                            class="sim-input-range">
+                    </div>
+
+                    <button id="btn-run-sim" class="btn-sim">Iniciar Varredura</button>
+
+                    <div id="sim-terminal" class="terminal-screen">
+                        <div class="terminal-line">// SISTEMA PRONTO PARA VARREDURA ORBITAL</div>
+                    </div>
+
+                    <div class="score-container">
+                        <span class="score-label">INDICE DE TOLERÂNCIA:</span>
+                        <span id="sim-score" class="score-value">--%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Quiz Dinâmico -->
+    <section id="quiz-section">
+        <div class="container flex-row">
+            <div class="flex-col">
+                <h2 class="section-title">Desafio Rad Anux</h2>
+                <p class="section-desc">
+                    Teste seus conhecimentos sobre Chaos Engineering aeroespacial, radiação solar e fenômenos de bit-flip na eletrônica espacial.
+                </p>
+                <p class="section-desc">
+                    Este quiz possui 10 perguntas dinâmicas e avalia seu nível de prontidão para garantir a tolerância a falhas de CubeSats em órbita terrestre.
+                </p>
+                <div class="quiz-badge">
+                    <span class="quiz-badge-title">Status da Missão:</span>
+                    <span class="quiz-badge-value" id="quiz-status-display">Aguardando Início</span>
+                </div>
+            </div>
+            
+            <div class="flex-col">
+                <!-- Painel do Quiz -->
+                <div class="quiz-panel" id="quiz-container">
+                    <div class="quiz-header">
+                        <span class="quiz-progress" id="quiz-progress-text">Pergunta 1 de 10</span>
+                        <div class="quiz-timer" id="quiz-score-live">Acertos: 0</div>
+                    </div>
+                    
+                    <div class="quiz-body" id="quiz-body-content">
+                        <h3 class="quiz-question" id="quiz-question-text">Carregando pergunta...</h3>
+                        <div class="quiz-options" id="quiz-options-container">
+                            <!-- Opções geradas via JavaScript -->
+                        </div>
+                    </div>
+                    
+                    <div class="quiz-footer">
+                        <button id="btn-next-question" class="btn btn-secondary" style="width: auto; padding: 10px 20px;" disabled>Avançar</button>
+                    </div>
+                </div>
+
+                <!-- Painel de Resultados do Quiz (oculto por padrão) -->
+                <div class="quiz-panel result-panel" id="quiz-result-container" style="display: none;">
+                    <div class="quiz-header" style="justify-content: center;">
+                        <span class="quiz-progress" style="font-size: 0.8rem;">RELATÓRIO DE DESEMPENHO</span>
+                    </div>
+                    <div class="quiz-result-body">
+                        <div class="result-gauge">
+                            <span id="result-score-percent">0%</span>
+                            <span class="result-gauge-label">Aproveitamento</span>
+                        </div>
+                        <h3 class="result-title" id="result-title-text">Candidato a Piloto</h3>
+                        <p class="result-message" id="result-message-text">Sua pontuação foi de 0 de 10 acertos.</p>
+                        
+                        <div class="result-details">
+                            <div class="result-stat">
+                                <span>Acertos:</span>
+                                <span class="value-highlight" id="stat-correct">0</span>
+                            </div>
+                            <div class="result-stat">
+                                <span>Erros:</span>
+                                <span class="value-highlight" id="stat-incorrect" style="color: var(--fail-color);">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="quiz-footer" style="justify-content: center;">
+                        <button id="btn-restart-quiz" class="btn" style="width: 100%;">Tentar Novamente</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Formulário com Validação -->
+    <section id="contato-section">
+        <div class="container flex-row">
+            <div class="flex-col">
+                <h2 class="section-title">Contato e Simulação</h2>
+                <p class="section-desc">
+                    Ficou interessado ou deseja testar nossa ferramenta em seu projeto CubeSat acadêmico? 
+                </p>
+                <p class="section-desc">
+                    Envie seus dados abaixo para receber uma chave de simulação customizada ou tirar suas dúvidas com a nossa equipe de resiliência espacial.
+                </p>
+                <div class="info-card">
+                    <span style="font-family: var(--font-mono); font-size: 0.7rem; color: var(--secondary-color);">ATENDIMENTO GLOBAL</span>
+                    <p style="font-size: 0.85rem; margin-top: 5px; color: var(--text-secondary);">Canal direto de suporte ao desenvolvedor aeroespacial da FIAP.</p>
+                </div>
+            </div>
+            
+            <div class="flex-col">
+                <!-- Formulário de Contato -->
+                <form id="academic-form" class="academic-form" novalidate>
+                    <div class="form-title">
+                        <span>SOLICITAÇÃO DE SIMULAÇÃO</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-name">Nome Completo</label>
+                        <input type="text" id="form-name" placeholder="Ex: Seu nome" class="form-input">
+                        <span class="error-message" id="error-name">Este campo é obrigatório.</span>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="form-email">E-mail Corporativo ou Acadêmico</label>
+                        <input type="email" id="form-email" placeholder="Ex: email@email.com" class="form-input">
+                        <span class="error-message" id="error-email">Por favor, insira um e-mail válido.</span>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group flex-col">
+                            <label for="form-org">Instituição / Faculdade</label>
+                            <input type="text" id="form-org" placeholder="Ex: FIAP" class="form-input">
+                            <span class="error-message" id="error-org">Este campo é obrigatório.</span>
+                        </div>
+                        <div class="form-group flex-col">
+                            <label for="form-sector">Setor de Atuação</label>
+                            <select id="form-sector" class="form-input">
+                                <option value="">Selecione...</option>
+                                <option value="academic">Acadêmico / Pesquisa</option>
+                                <option value="industry">Indústria Aeroespacial</option>
+                                <option value="gov">Governo / Agência Espacial</option>
+                                <option value="other">Outros</option>
+                            </select>
+                            <span class="error-message" id="error-sector">Selecione uma opção.</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="form-message">Mensagem / Observação</label>
+                        <textarea id="form-message" rows="3" placeholder="Descreva brevemente como planeja testar sua resiliência de software..." class="form-input"></textarea>
+                        <span class="error-message" id="error-message-text">Este campo é obrigatório.</span>
+                    </div>
+                    
+                    <button type="submit" class="btn" style="width: 100%; border-radius: 8px;">Enviar Solicitação</button>
+                    
+                    <!-- Sucesso Toast / Mensagem -->
+                    <div class="form-success-toast" id="form-success-toast">
+                        🎉 Solicitação enviada com sucesso! Verifique seu e-mail.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rodapé Padronizado -->
+    <footer class="footer" id="footer-section">
+        <div class="container">
+            <a href="#hero" class="footer-logo" id="footer-logo-link">Rad<span>Anux</span></a>
+            <div class="footer-members">
+                <p class="footer-members-title">INTEGRANTES DO GRUPO (WEB DEV)</p>
+                <p>Renan Queiroz - RM569077</p>
+                <p>Evandro Marcondes - RM572473</p>
+                <p>Enzo Izidoro - RM569665</p>
+                <p>Pedro Marques - RM569307</p>
+                <p>Raphael Oliveira - RM571065</p>
+            </div>
+            <p class="footer-copyright">&copy; 2026 Rad Anux Team. Global Solution - Engenharia de Web Development.</p>
+        </div>
+    </footer>
+
+    <!-- Seletor de Temas Flutuante -->
+    <div class="theme-switcher-container" id="theme-switcher">
+        <span class="theme-switcher-title">TEMA</span>
+        <div class="theme-buttons">
+            <button class="theme-btn active" id="theme-btn-obsidian" title="Obsidian Space" data-theme="obsidian"></button>
+            <button class="theme-btn" id="theme-btn-void" title="Deep Void" data-theme="void"></button>
+            <button class="theme-btn" id="theme-btn-nebula" title="Nebula Purple" data-theme="nebula"></button>
+        </div>
+    </div>
+
+    <!-- Comportamento Separado em Javascript -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
