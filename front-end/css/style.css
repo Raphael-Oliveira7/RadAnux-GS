@@ -77,10 +77,52 @@ body {
     width: 100%;
 }
 
+/* Banner Acadêmico de Conexão */
+.academic-banner {
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+    color: var(--bg-dark);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+    z-index: 1001;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 255, 204, 0.2);
+}
+
+.academic-banner-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.academic-link {
+    color: var(--bg-dark);
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.85);
+    padding: 4px 12px;
+    border-radius: 20px;
+    transition: var(--transition-fast);
+    font-family: var(--font-heading);
+    font-size: 0.65rem;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.academic-link:hover {
+    background-color: var(--text-primary);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
 /* Header Flutuante (Estilo Pílula Futurista) */
 .header {
     position: fixed;
-    top: 20px;
+    top: 65px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -833,7 +875,14 @@ section::after {
 }
 
 @media (max-width: 600px) {
+    .academic-banner-content {
+        justify-content: center;
+        flex-direction: column;
+        gap: 6px;
+        text-align: center;
+    }
     .header {
+        top: 65px;
         height: auto;
         padding: 15px 0;
         border-radius: 16px;
